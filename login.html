@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Login</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+height:100vh;
+background:linear-gradient(to bottom,#f7c6a4,#f1a05d);
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* White box */
+
+.login-box{
+background:white;
+width:400px;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+text-align:center;
+position:relative;
+}
+
+/* Heading */
+
+h1{
+color:#d35400;
+border-bottom:4px solid #e76f51;
+display:inline-block;
+padding-bottom:5px;
+margin-bottom:30px;
+}
+
+/* Input fields */
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+/* Buttons */
+
+.back-btn{
+position:absolute;
+bottom:20px;
+left:20px;
+background:#aaa;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:20px;
+cursor:pointer;
+}
+
+.login-btn{
+position:absolute;
+bottom:20px;
+right:20px;
+background:#e76f51;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:20px;
+cursor:pointer;
+}
+
+.login-btn:hover{
+background:#d35400;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h1>User Login</h1>
+
+<input type="text" placeholder="Enter your name">
+
+<input type="text" placeholder="Phone number">
+
+<input type="email" placeholder="Email address">
+
+<button class="back-btn" onclick="location.href='index.html'">
+Back
+</button>
+
+<button class="login-btn">
+Login
+</button>
+
+</div>
+
+</body>
+  </html>
