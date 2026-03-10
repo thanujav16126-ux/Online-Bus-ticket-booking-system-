@@ -92,14 +92,16 @@ background:#d35400;
 
 <label>Password</label>
 <input type="password" placeholder="Enter password">
-
-<label>Name</label>
-<input type="text" placeholder="Enter your name">
+  <label>Name</label>
+<input type="text" id="name" placeholder="Enter your name">
 
 <label>Phone Number</label>
-<input type="text" placeholder="Enter phone number">
-  <label>Email</label>
-<input type="email" placeholder="Enter your email">
+<input type="text" id="phone" placeholder="Enter phone number">
+
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter email">
+
+<button class="login-btn" onclick="validateLogin()">Login</button>
 
 <button class="back-btn" onclick="location.href='index.html'">
 Back
@@ -110,6 +112,46 @@ Login
 </button>
 
 </div>
+  <script>
+
+function validateLogin(){
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let email = document.getElementById("email").value;
+
+/* Check empty */
+
+if(name=="" || phone=="" || email==""){
+alert("Please enter all details");
+return;
+}
+
+/* Name validation */
+
+let namePattern = /^[A-Za-z ]+$/;
+
+if(!namePattern.test(name)){
+alert("Enter valid name");
+return;
+}
+
+/* Phone validation */
+
+let phonePattern = /^[0-9]{10}$/;
+
+if(!phonePattern.test(phone)){
+alert("Enter valid phone number");
+return;
+}
+
+/* Success */
+
+alert("Login successful");
+
+}
+
+  </script>
 
 </body>
   </html>
