@@ -35,26 +35,57 @@ h3{
 margin-top:20px;
 }
 
+/* Boarding dropdown */
+
+select{
+width:300px;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+margin-top:10px;
+}
+
+/* Destination grid */
+
 .destinations{
 display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:20px;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
 margin-top:20px;
 }
 
+/* Destination box */
+
 .card{
 border:1px solid #ddd;
-border-radius:10px;
-padding:15px;
+border-radius:12px;
+padding:20px;
 cursor:pointer;
 display:flex;
-align-items:center;
+align-items:flex-start;
+gap:10px;
+background:#fafafa;
 }
 
 .card input{
-margin-right:10px;
+margin-top:6px;
 accent-color:#e76f51;
 }
+
+/* Destination text */
+
+.place b{
+font-size:18px;
+display:block;
+}
+
+.place p{
+margin:3px 0;
+font-size:14px;
+color:#555;
+}
+
+/* Buttons */
 
 .next-btn{
 position:absolute;
@@ -83,6 +114,8 @@ border:none;
 border-radius:20px;
 cursor:pointer;
 }
+
+/* Popup */
 
 .popup{
 display:none;
@@ -125,36 +158,73 @@ float:right;
 
 <h3>Select Boarding Point</h3>
 
+<select id="boardingPoint">
+<option value="">Select Boarding Point</option>
+<option>Mumbai Bus Stand</option>
+<option>Pune Bus Stand</option>
+<option>Nashik Bus Stand</option>
+<option>Aurangabad Bus Stand</option>
+<option>Solapur Bus Stand</option>
+<option>Hyderabad Bus Stand</option>
+<option>Bangalore Bus Stand</option>
+</select>
+
+<h3>Select Destination</h3>
+
 <div class="destinations">
 
 <label class="card">
 <input type="radio" name="location" value="Pune">
-Pune – 150 km away from Mumbai
+<div class="place">
+<b>Pune</b>
+<p>150 km</p>
+<p>away from Mumbai</p>
+</div>
 </label>
 
 <label class="card">
 <input type="radio" name="location" value="Nashik">
-Nashik – 300 km away from Mumbai
+<div class="place">
+<b>Nashik</b>
+<p>300 km</p>
+<p>away from Mumbai</p>
+</div>
 </label>
 
 <label class="card">
 <input type="radio" name="location" value="Aurangabad">
-Aurangabad – 470 km away from Mumbai
+<div class="place">
+<b>Aurangabad</b>
+<p>470 km</p>
+<p>away from Mumbai</p>
+</div>
 </label>
 
 <label class="card">
 <input type="radio" name="location" value="Solapur">
-Solapur – 690 km away from Mumbai
+<div class="place">
+<b>Solapur</b>
+<p>690 km</p>
+<p>away from Mumbai</p>
+</div>
 </label>
 
 <label class="card">
 <input type="radio" name="location" value="Hyderabad">
-Hyderabad – 990 km away from Mumbai
+<div class="place">
+<b>Hyderabad</b>
+<p>990 km</p>
+<p>away from Mumbai</p>
+</div>
 </label>
 
 <label class="card">
 <input type="radio" name="location" value="Bangalore">
-Bangalore – 1580 km away from Mumbai
+<div class="place">
+<b>Bangalore</b>
+<p>1580 km</p>
+<p>away from Mumbai</p>
+</div>
 </label>
 
 </div>
@@ -165,31 +235,12 @@ Bangalore – 1580 km away from Mumbai
 
 <div class="popup" id="popup">
 <div class="popup-box">
-<p>Please select location</p>
+<p>Please select boarding point and destination</p>
 <button onclick="closePopup()">OK</button>
 </div>
 </div>
 
-<script>
-
-function nextPage(){
-
-let selected=document.querySelector('input[name="location"]:checked');
-
-if(!selected){
-document.getElementById("popup").style.display="flex";
-return;
-}
-
-window.location.href="seats.html";
-
-}
-
-function closePopup(){
-document.getElementById("popup").style.display="none";
-}
-
-</script>
+<script src="destination.js"></script>
 
 </body>
-  </html>
+                             </html>
