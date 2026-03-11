@@ -6,56 +6,72 @@
 
 <style>
 
-/* Page background */
-
 body{
 margin:0;
 font-family:Arial;
-height:100vh;
 background:linear-gradient(to bottom,#f7c6a4,#f1a05d);
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 }
 
-/* Main container */
-
 .container{
 background:white;
-width:80%;
-height:70%;
+width:85%;
+height:75%;
 border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,0.2);
 padding:40px;
 position:relative;
 }
 
-/* Heading */
-
 h1{
-color:#d35400;
+color:#e76f51;
+margin-bottom:10px;
 }
 
-/* Location list */
+h3{
+margin-top:20px;
+}
 
-.location{
-margin:15px 0;
-font-size:18px;
+.destinations{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+border:1px solid #ddd;
+border-radius:10px;
+padding:15px;
+cursor:pointer;
+display:flex;
+align-items:center;
+}
+
+.card input{
+margin-right:10px;
+accent-color:#e76f51;
+}
+
+.next-btn{
+position:absolute;
+bottom:30px;
+right:40px;
+padding:10px 20px;
+background:#e76f51;
+color:white;
+border:none;
+border-radius:20px;
 cursor:pointer;
 }
-
-/* Orange radio button */
-
-input[type="radio"]{
-accent-color:orange;
-}
-
-/* Top buttons */
 
 .top-buttons{
 position:absolute;
 top:20px;
-right:30px;
+right:20px;
 }
 
 .top-buttons button{
@@ -67,22 +83,6 @@ border:none;
 border-radius:20px;
 cursor:pointer;
 }
-
-/* Next button */
-
-.next-btn{
-position:absolute;
-bottom:30px;
-right:40px;
-padding:10px 25px;
-background:#e76f51;
-color:white;
-border:none;
-border-radius:20px;
-cursor:pointer;
-}
-
-/* Popup */
 
 .popup{
 display:none;
@@ -104,7 +104,7 @@ text-align:center;
 }
 
 .popup-box button{
-margin-top:15px;
+margin-top:10px;
 float:right;
 }
 
@@ -117,7 +117,7 @@ float:right;
 <div class="container">
 
 <div class="top-buttons">
-<button onclick="history.back()">Back</button>
+<button onclick="location.href='login.html'">Back</button>
 <button onclick="location.href='index.html'">Logout</button>
 </div>
 
@@ -125,34 +125,71 @@ float:right;
 
 <h3>Select Boarding Point</h3>
 
-<label class="location">
-<input type="radio" name="location"> Pune – 150 km away from Mumbai
+<div class="destinations">
+
+<label class="card">
+<input type="radio" name="location" value="Pune">
+Pune – 150 km away from Mumbai
 </label>
 
-<label class="location">
-<input type="radio" name="location"> Nashik – 300 km away from Mumbai
+<label class="card">
+<input type="radio" name="location" value="Nashik">
+Nashik – 300 km away from Mumbai
 </label>
 
-<label class="location">
-<input type="radio" name="location"> Aurangabad – 470 km away from Mumbai
+<label class="card">
+<input type="radio" name="location" value="Aurangabad">
+Aurangabad – 470 km away from Mumbai
 </label>
 
-<label class="location">
-<input type="radio" name="location"> Solapur – 690 km away from Mumbai
+<label class="card">
+<input type="radio" name="location" value="Solapur">
+Solapur – 690 km away from Mumbai
 </label>
 
-<label class="location">
-<input type="radio" name="location"> Hyderabad – 990 km away from Mumbai
+<label class="card">
+<input type="radio" name="location" value="Hyderabad">
+Hyderabad – 990 km away from Mumbai
 </label>
 
-<label class="location">
-<input type="radio" name="location"> Bangalore – 1580 km away from Mumbai
+<label class="card">
+<input type="radio" name="location" value="Bangalore">
+Bangalore – 1580 km away from Mumbai
 </label>
-
-<button class="next-btn" onclick="goNext()">Next</button>
 
 </div>
 
-<!-- Popup -->
+<button class="next-btn" onclick="nextPage()">Next</button>
 
-<div
+</div>
+
+<div class="popup" id="popup">
+<div class="popup-box">
+<p>Please select location</p>
+<button onclick="closePopup()">OK</button>
+</div>
+</div>
+
+<script>
+
+function nextPage(){
+
+let selected=document.querySelector('input[name="location"]:checked');
+
+if(!selected){
+document.getElementById("popup").style.display="flex";
+return;
+}
+
+window.location.href="seats.html";
+
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+
+</script>
+
+</body>
+  </html>
