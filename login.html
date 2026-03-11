@@ -110,6 +110,25 @@ text-align:center;
 margin-top:15px;
 float:right;
 }
+  .form{
+width:420px;
+margin:0 auto;
+}
+
+.form label{
+display:inline-block;
+width:140px;
+text-align:right;
+margin-right:10px;
+}
+
+.form input{
+width:240px;
+padding:10px;
+margin:8px 0;
+border-radius:5px;
+border:1px solid #ccc;
+  }
 .form-row{
 display:flex;
 align-items:center;
@@ -153,6 +172,7 @@ border-bottom:3px solid #e76f51;
 padding-bottom:5px;
 margin-bottom:30px;
   }
+  
 
 </style>
 
@@ -164,19 +184,17 @@ margin-bottom:30px;
 
 <h1>User Login</h1>
 
-<div class="form-group">
+<div class="form">
+
 <label>Name <span class="star">*</span></label>
-<input type="text" id="name">
-</div>
+<input type="text" id="name"><br>
 
-<div class="form-group">
 <label>Phone Number <span class="star">*</span></label>
-<input type="text" id="phone">
-</div>
+<input type="text" id="phone"><br>
 
-<div class="form-group">
 <label>Email</label>
 <input type="email" id="email">
+
 </div>
 
 <button class="login-btn" onclick="validateLogin()">Login</button>
