@@ -5,7 +5,6 @@
 <title>User Login</title>
 
 <style>
-  
 
 /* Page background */
 
@@ -19,7 +18,7 @@ justify-content:center;
 align-items:center;
 }
 
-/* White box */
+/* White container */
 
 .container{
 background:white;
@@ -33,17 +32,32 @@ justify-content:center;
 align-items:center;
 position:relative;
 padding:40px;
-  }
-  
-  input{
-width:260px;
-padding:10px;
-border-radius:5px;
-border:1px solid #ccc;
-  }
-  }
+}
 
-/* Input fields */
+/* Heading */
+
+h1{
+color:#e76f51;
+border-bottom:3px solid #e76f51;
+padding-bottom:5px;
+margin-bottom:30px;
+}
+
+/* Form alignment */
+
+.form{
+width:420px;
+margin:0 auto;
+}
+
+.form label{
+display:inline-block;
+width:140px;
+text-align:right;
+margin-right:10px;
+}
+
+/* Inputs */
 
 input{
 width:260px;
@@ -53,7 +67,7 @@ border-radius:5px;
 border:1px solid #ccc;
 }
 
-/* Star for mandatory */
+/* Mandatory star */
 
 .star{
 color:red;
@@ -83,7 +97,7 @@ color:white;
 border:none;
 border-radius:20px;
 cursor:pointer;
-  }
+}
 
 /* Popup */
 
@@ -110,69 +124,6 @@ text-align:center;
 margin-top:15px;
 float:right;
 }
-  .form{
-width:420px;
-margin:0 auto;
-}
-
-.form label{
-display:inline-block;
-width:140px;
-text-align:right;
-margin-right:10px;
-}
-
-.form input{
-width:240px;
-padding:10px;
-margin:8px 0;
-border-radius:5px;
-border:1px solid #ccc;
-  }
-.form-row{
-display:flex;
-align-items:center;
-margin:12px 0;
-}
-
-.form-row label{
-width:140px;
-text-align:right;
-margin-right:15px;
-}
-
-.form-row input{
-width:250px;
-padding:10px;
-border-radius:5px;
-border:1px solid #ccc;
-}
-.form-group{
-display:flex;
-align-items:center;
-justify-content:center;
-margin:12px 0;
-}
-
-.form-group label{
-width:150px;
-text-align:right;
-margin-right:15px;
-}
-
-.form-group input{
-width:260px;
-padding:10px;
-border-radius:5px;
-border:1px solid #ccc;
-  }
-h1{
-color:#e76f51;
-border-bottom:3px solid #e76f51;
-padding-bottom:5px;
-margin-bottom:30px;
-  }
-  
 
 </style>
 
@@ -181,6 +132,8 @@ margin-bottom:30px;
 <body>
 
 <div class="container">
+
+<button class="back-btn" onclick="location.href='index.html'">Back</button>
 
 <h1>User Login</h1>
 
@@ -198,8 +151,6 @@ margin-bottom:30px;
 </div>
 
 <button class="login-btn" onclick="validateLogin()">Login</button>
-
-<button class="back-btn" onclick="location.href='index.html'">Back</button>
 
 </div>
 
@@ -234,14 +185,14 @@ let name=document.getElementById("name").value;
 let phone=document.getElementById("phone").value;
 
 if(name=="" || phone==""){
-showPopup("Enter the details");
+showPopup("Please enter the details");
 return;
 }
 
 let phonePattern=/^[0-9]{10}$/;
 
 if(!phonePattern.test(phone)){
-showPopup("Enter valid phone number");
+showPopup("Please enter valid phone number");
 return;
 }
 
@@ -254,7 +205,6 @@ window.location.href="destination.html";
 }
 
 </script>
-  <script src="login.js"></script>
 
 </body>
-</html>
+  </html>
