@@ -1,117 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>Online Bus Ticket Booking</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial;
-height:100vh;
-background:linear-gradient(to bottom,#f7c6a4,#f1a05d);
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-/* Main white card */
-
-.container{
-background:white;
-width:80%;
-height:70%;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
-align-items:center;
-text-align:center;
-position:relative;
-padding:80px 40px 40px 40px;
-  }
-
-/* Bus image */
-
-.bus{
-position:absolute;
-left:30px;
-top:50%;
-transform:translateY(-50%);
-width:350px;
-}
-
-/* Heading */
-
-h1{
-font-size:45px;
-color:#d35400;
-margin-bottom:10px;
-border-bottom:4px solid #e76f51;
-display:inline-block;
-padding-bottom:5px;
-}
-
-/* Subheading */
-
-h2{
-font-size:32px;
-color:#e76f51;
-margin-bottom:10px;
-}
-
-/* Paragraph */
-
-p{
-font-size:18px;
-color:#555;
-}
-
-/* Button */
-
-.start-btn{
-position:absolute;
-bottom:30px;
-right:40px;
-background:#e76f51;
-color:white;
-border:none;
-padding:12px 25px;
-border-radius:25px;
-cursor:pointer;
-font-size:16px;
-}
-
-.start-btn:hover{
-background:#d35400;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBus | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">QuickBus</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link btn btn-outline-warning ms-lg-3" href="#">Register</a>
+            </div>
+        </div>
+    </nav>
 
-<!-- Bus Image -->
-<img src="bus.png" class="bus" alt="Bus">
+    <header class="hero-section">
+        <div class="container">
+            <div class="search-box shadow-lg">
+                <h2 class="text-center mb-4">Book Your Bus Ticket</h2>
+                <form id="searchForm" class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">From</label>
+                        <input type="text" id="fromCity" class="form-control" placeholder="Source City" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">To</label>
+                        <input type="text" id="toCity" class="form-control" placeholder="Destination City" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Date</label>
+                        <input type="date" id="travelDate" class="form-control" required>
+                    </div>
+                    <div class="col-md-1 d-flex align-items-end">
+                        <button type="submit" class="btn btn-orange w-100">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
 
-<h1>Welcome To</h1>
-
-<h2>Online Bus Ticket Booking</h2>
-
-<p>Book your journey easily and enjoy your travel.</p>
-
-<button onclick="location.href='login.html'">Get Started</button>
-
-Get Started
-
-</button>
-
-</div>
-
+    <script src="script.js"></script>
 </body>
 </html>
