@@ -1,0 +1,36 @@
+/* Custom Orange Theme */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+.hero-section {
+    /* Horizontal Gradient: Dark Orange to Very Light Orange */
+    background: linear-gradient(to right, #e65100, #ff9800, #fff3e0);
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.btn-orange {
+    background-color: #ef6c00;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-orange:hover {
+    background-color: #e65100;
+    color: white;
+    transform: translateY(-2px);
+}
