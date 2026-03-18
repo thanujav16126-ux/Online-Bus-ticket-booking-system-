@@ -3,33 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BusGo - Online Ticket Booking</title>
-    <link rel="stylesheet" href="style.css">
+    <title>BusGo Landing Page</title>
+    <style>
+        /* All the styling is now inside this file so it won't break */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ff9a7b; /* The orange background from your photo */
+            background: linear-gradient(135deg, #ff9a7b 0%, #f77062 100%);
+        }
+
+        .container {
+            background: white;
+            width: 90%;
+            max-width: 900px;
+            padding: 50px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Top Left Logo */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #d35400;
+            font-weight: bold;
+        }
+
+        .logo-box {
+            background: #e67e22;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Layout Grid */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+        }
+
+        /* Image sizing fix - this prevents the "giant bus" problem */
+        .image-side img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .text-side h1 {
+            font-size: 3rem;
+            color: #d35400;
+            margin-bottom: 0;
+        }
+
+        .text-side .to-text {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .text-side h2 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .text-side p {
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+
+        /* The Button */
+        .btn {
+            background: #e67e22;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            float: right; /* Moves it to the right like your design */
+        }
+
+        .btn:hover {
+            background: #d35400;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .content { grid-template-columns: 1fr; text-align: center; }
+            .btn { float: none; }
+        }
+    </style>
 </head>
 <body>
-    <div class="background-container">
-        <main class="card">
-            <header class="logo-container">
-                <div class="logo-icon">🚌</div>
-                <span class="logo-text">BusGo</span>
-            </header>
 
-            <div class="content-wrapper">
-                <div class="image-section">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3448/3448339.png" alt="Bus Illustration" class="bus-img">
-                </div>
+    <div class="container">
+        <div class="logo">
+            <span class="logo-box">🚌</span> BusGo
+        </div>
 
-                <div class="text-section">
-                    <h1>Welcome <br> <span>to</span></h1>
-                    <h2>Online Bus Ticket Booking System</h2>
-                    <p>Book your journey easily and travel comfortable to your destination.</p>
-                </div>
+        <div class="content">
+            <div class="image-side">
+                <img src="https://i.imgur.com/vHqYh7X.png" alt="Bus Illustration">
             </div>
 
-            <footer class="card-footer">
-                <button class="btn-get-started">Get Started &rarr;</button>
-            </footer>
-        </main>
+            <div class="text-side">
+                <h1>Welcome</h1>
+                <span class="to-text">to</span>
+                <h2>Online Bus Ticket Booking System</h2>
+                <p>Book your journey easily and travel comfortable to your destination.</p>
+                <a href="#" class="btn">Get Started &rarr;</a>
+            </div>
+        </div>
     </div>
+
 </body>
-</html>
+    </html>
+    
