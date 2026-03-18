@@ -1,112 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Online Bus Ticket Booking</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:white;
-}
-
-/* Header */
-.header{
-background:orange;
-color:white;
-text-align:center;
-font-size:60px;
-font-weight:bold;
-padding:30px;
-}
-
-/* Main section */
-.main{
-text-align:center;
-margin-top:40px;
-}
-
-/* Title */
-.title{
-font-size:32px;
-margin-bottom:10px;
-}
-
-.subtitle{
-font-size:22px;
-}
-
-.ease{
-font-size:26px;
-font-weight:bold;
-margin-top:5px;
-}
-
-/* Layout */
-.container{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:150px;
-margin-top:80px;
-}
-
-/* Bus image */
-.bus img{
-width:380px;
-}
-
-/* Button */
-.button a{
-background:orange;
-color:white;
-padding:15px 35px;
-font-size:20px;
-text-decoration:none;
-border-radius:8px;
-}
-
-.button a:hover{
-background:#ff7a00;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusGo - Online Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="background-container">
+        <main class="card">
+            <header class="logo-container">
+                <div class="logo-icon">🚌</div>
+                <span class="logo-text">BusGo</span>
+            </header>
 
-<div class="header">
-WELCOME TO
-</div>
+            <div class="content-wrapper">
+                <div class="image-section">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3448/3448339.png" alt="Bus Illustration" class="bus-img">
+                </div>
 
-<div class="main">
+                <div class="text-section">
+                    <h1>Welcome <br> <span>to</span></h1>
+                    <h2>Online Bus Ticket Booking System</h2>
+                    <p>Book your journey easily and travel comfortable to your destination.</p>
+                </div>
+            </div>
 
-<div class="title">
-Online Bus Ticket Booking System
-</div>
-
-<div class="subtitle">
-Book your journey and travel with
-</div>
-
-<div class="ease">
-EASE
-</div>
-
-</div>
-
-<div class="container">
-
-<div class="bus">
-<img src="bus.png">
-</div>
-
-<div class="button">
-<a href="login.html">Get Started</a>
-</div>
-
-</div>
-
+            <footer class="card-footer">
+                <button class="btn-get-started">Get Started &rarr;</button>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>
