@@ -1,48 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bus Ticket Booking</title>
+<title>Online Bus Ticket Booking</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, sans-serif;
-background:linear-gradient(to top,#E8B86D,#F3D19A);
+background:white;
+font-family:Arial;
 }
 
-/* Top orange banner */
+/* Top orange header */
 .header{
-background:linear-gradient(to right,#ffb347,#ffcc80);
+background:orange;
+color:white;
+text-align:center;
 padding:20px;
-text-align:center;
-}
-
-.header h1{
 font-size:36px;
-margin:0;
-letter-spacing:2px;
+font-weight:bold;
 }
 
-/* Main section */
-.container{
+/* Text section */
+.text{
 text-align:center;
-padding-top:20px;
+margin-top:2cm;
 }
 
-/* Welcome text */
-.welcome{
+.title{
 font-size:28px;
-margin-top:10px;
 }
 
 .subtitle{
 font-size:21px;
-margin-top:5px;
+margin-top:10px;
 }
 
-/* Layout */
-.content{
+/* Layout for image and button */
+.container{
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -55,18 +50,17 @@ width:250px;
 }
 
 /* Button */
-.start-btn a{
-text-decoration:none;
-background:#ff8c00;
+.button a{
+background:orange;
 color:white;
 padding:12px 25px;
-border-radius:8px;
+text-decoration:none;
 font-size:18px;
-transition:0.3s;
+border-radius:6px;
 }
 
-.start-btn a:hover{
-background:#ff6a00;
+.button a:hover{
+background:#ff7a00;
 }
 
 </style>
@@ -75,24 +69,31 @@ background:#ff6a00;
 <body>
 
 <div class="header">
-<h1>WELCOME TO</h1>
+WELCOME TO
+</div>
+
+<div class="text">
+
+<div class="title">
+Online Ticket<br>
+Booking System
+</div>
+
+<div class="subtitle">
+Book your seat and<br>
+travel with ease
+</div>
+
 </div>
 
 <div class="container">
-
-<div class="welcome">Online Ticket Booking System</div>
-<div class="subtitle">Book your seat and travel with ease</div>
-
-<div class="content">
 
 <div class="bus">
 <img src="bus.png" alt="Bus Image">
 </div>
 
-<div class="start-btn">
-<a href="login.html">Get Started →</a>
-</div>
-
+<div class="button">
+<a href="login.html">Get Started</a>
 </div>
 
 </div>
