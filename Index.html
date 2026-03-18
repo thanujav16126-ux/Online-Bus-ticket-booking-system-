@@ -8,68 +8,72 @@
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#f7a35c,#ffd6b3);
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
+background:linear-gradient(135deg,#eaa46a,#f6c8a1);
 }
 
-/* Main card */
+/* White box */
 .container{
 background:white;
-width:900px;
-padding:40px;
+width:85%;
+height:75vh;
+margin:2cm auto;
 border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+padding:40px;
+position:relative;
 display:flex;
 align-items:center;
-justify-content:space-between;
 }
 
 /* Bus image */
 .bus img{
-width:300px;
+width:320px;
 }
 
 /* Text section */
 .text{
-max-width:400px;
+margin-left:60px;
+max-width:450px;
 }
 
-.text h1{
+/* Welcome */
+.welcome{
+font-size:55px;
 color:#e76f00;
-font-size:50px;
-margin:0;
+font-weight:bold;
 }
 
-.text h2{
+/* Title */
+.title{
+font-size:28px;
 margin-top:10px;
-font-size:26px;
 }
 
-.text p{
-font-size:18px;
-color:#555;
+/* Description */
+.desc{
+color:#e76f00;
+font-size:20px;
 margin-top:10px;
 }
 
 /* Button */
 .button{
-margin-top:30px;
+position:absolute;
+bottom:3cm;
+right:3cm;
 }
 
 .button a{
 background:#e76f00;
 color:white;
-padding:12px 28px;
+padding:14px 30px;
 border-radius:25px;
 text-decoration:none;
 font-size:18px;
 }
 
 .button a:hover{
-background:#cc5f00;
+background:#c85e00;
 }
 
 </style>
@@ -85,19 +89,23 @@ background:#cc5f00;
 
 <div class="text">
 
-<h1>Welcome<br>to</h1>
+<div class="welcome">
+WELCOME TO
+</div>
 
-<h2>Online Bus Ticket Booking System</h2>
+<div class="title">
+Online Bus Ticket Booking System
+</div>
 
-<p>
-Book your journey easily and travel
-comfortable to your destination.
-</p>
+<div class="desc">
+Get your journey booked easily and travel
+comfortably to your destination.
+</div>
+
+</div>
 
 <div class="button">
 <a href="login.html">Get Started →</a>
-</div>
-
 </div>
 
 </div>
