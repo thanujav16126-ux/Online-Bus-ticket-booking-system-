@@ -1,14 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Bus Ticket Booking</title>
+
 <style>
+
 body{
-  margin:0;
-  height:100vh;
-  background: linear-gradient(to top, #E8B86D, #F3D19A);
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(to top,#E8B86D,#F3D19A);
 }
+
+/* Top orange banner */
+.header{
+background:linear-gradient(to right,#ffb347,#ffcc80);
+padding:20px;
+text-align:center;
+}
+
+.header h1{
+font-size:36px;
+margin:0;
+letter-spacing:2px;
+}
+
+/* Main section */
+.container{
+text-align:center;
+padding-top:20px;
+}
+
+/* Welcome text */
+.welcome{
+font-size:28px;
+margin-top:10px;
+}
+
+.subtitle{
+font-size:21px;
+margin-top:5px;
+}
+
+/* Layout */
+.content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px;
+}
+
+/* Bus image */
+.bus img{
+width:250px;
+}
+
+/* Button */
+.start-btn a{
+text-decoration:none;
+background:#ff8c00;
+color:white;
+padding:12px 25px;
+border-radius:8px;
+font-size:18px;
+transition:0.3s;
+}
+
+.start-btn a:hover{
+background:#ff6a00;
+}
+
 </style>
 </head>
+
 <body>
+
+<div class="header">
+<h1>WELCOME TO</h1>
+</div>
+
+<div class="container">
+
+<div class="welcome">Online Ticket Booking System</div>
+<div class="subtitle">Book your seat and travel with ease</div>
+
+<div class="content">
+
+<div class="bus">
+<img src="bus.png" alt="Bus Image">
+</div>
+
+<div class="start-btn">
+<a href="login.html">Get Started →</a>
+</div>
+
+</div>
+
+</div>
+
 </body>
 </html>
